@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Chorągiew Wielkopolska ZHP - Generator stopek</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img class="logo" src="img/logo.png"/>
+      <h3>Generator stopek</h3>
+    </div>
+  <form id="generator" action="generate.php" method="post">
+    <div class="spacer"></div>
+    <h4>Uzupełnij dane i kliknij Generuj</h4>
+    <h5>Stopień Instruktorski:</h5>
+    <fieldset>
+      <input type="radio" name="stopienInstr" value="" selected required> brak  
+      <input type="radio" name="stopienInstr" value="pwd." required> pwd.  
+      <input type="radio" name="stopienInstr" value="phm." required> phm.  
+      <input type="radio" name="stopienInstr" value="hm." required> hm.
+    </fieldset>
+    <fieldset>
+      <input class="double-input" name="imie" placeholder="Imię" type="text" tabindex="2" required>
+      <input class="double-input" name="nazwisko" placeholder="Nazwisko" type="text" tabindex="3" required>
+    </fieldset>
+    <fieldset>
+      <input class="single-input" name="funkcja" placeholder="Pełniona funkcja" type="text" tabindex="4" required>
+    </fieldset>
+    <fieldset>
+      <input class="single-input" name="funkcja2" placeholder="Druga Pełniona funkcja (opcjonalnie)" type="text" tabindex="8">
+    </fieldset>
+    <fieldset>
+      <input class="single-input" name="telefon" placeholder="Numer telefonu (opcjonalnie)" type="text" tabindex="5">
+    </fieldset>
+    <fieldset>
+      <input class="single-input" name="poczta" placeholder="Adres e-mail w domenie zhp.net.pl" type="text" tabindex="6" required>
+    </fieldset>
+    <fieldset>
+      <label for="przydzial">Wybierz przydział:</label>
+       <select class="przydzial" name="przydzial" type="text" tabindex="7">
+         <option value="" selected>Chorągiew Wielkopolska ZHP</option>
+         <option value="Hufiec ZHP Chodzież">Hufiec ZHP Chodzież</option>
+         <option value="Hufiec ZHP Czerwonak im. Wojska Polskiego">Hufiec ZHP Czerwonak im. Wojska Polskiego</option>
+         <option value="Hufiec ZHP Gniezno im. Bolesława Chrobrego">Hufiec ZHP Gniezno im. Bolesława Chrobrego</option>
+         <option value="Hufiec ZHP Jarocin im. Lotnictwa Polskiego">Hufiec ZHP Jarocin im. Lotnictwa Polskiego</option>
+         <option value="Hufiec ZHP Kalisz im. ks. hm. Stanisława Piotrowskiego">Hufiec ZHP Kalisz im. ks. hm. Stanisława Piotrowskiego</option>
+         <option value="Hufiec ZHP Kępno im. Wojska Polskiego">Hufiec ZHP Kępno im. Wojska Polskiego</option>
+         <option value="Hufiec ZHP Koło im. Kazimierza Wielkiego">Hufiec ZHP Koło im. Kazimierza Wielkiego</option>
+         <option value="Hufiec ZHP Konin im. Szarych Szeregów">Hufiec ZHP Konin im. Szarych Szeregów</option>
+         <option value="Hufiec ZHP Złotów im. Bojowników o Wolność i Polskość Ziemi Złotowskiej">Hufiec ZHP Złotów im. Bojowników o Wolność i Polskość Ziemi Złotowskiej</option>
+         <option value="Hufiec ZHP Kościan im. hm. Floriana Marciniaka">Hufiec ZHP Kościan im. hm. Floriana Marciniaka</option>
+         <option value="Hufiec ZHP Koźmin Wielkopolski im. Strajku Szkolnego Dzieci Koźmińskich 1906/07">Hufiec ZHP Koźmin Wielkopolski im. Strajku Szkolnego Dzieci Koźmińskich 1906/07</option>
+         <option value="Hufiec ZHP Kórnik im. Tytusa Hrabiego Działyńskiego">Hufiec ZHP Kórnik im. Tytusa Hrabiego Działyńskiego</option>
+         <option value="Hufiec ZHP Krotoszyn im. Powstańców Wielkopolskich">Hufiec ZHP Krotoszyn im. Powstańców Wielkopolskich</option>
+         <option value="Hufiec ZHP Leszno im. Żołnierzy Garnizonu Leszczyńskiego">Hufiec ZHP Leszno im. Żołnierzy Garnizonu Leszczyńskiego</option>
+         <option value="Hufiec ZHP Mosina im. Bolesława Chrobrego">Hufiec ZHP Mosina im. Bolesława Chrobrego</option>
+         <option value="Hufiec ZHP Nowy Tomyśl im. Emilii Sczanieckiej">Hufiec ZHP Nowy Tomyśl im. Emilii Sczanieckiej</option>
+         <option value="Hufiec ZHP Ostrów Wielkopolski im. II Armii Wojska Polskiego">Hufiec ZHP Ostrów Wielkopolski im. II Armii Wojska Polskiego</option>
+         <option value="Hufiec ZHP Piła im. Stanisława Staszica">Hufiec ZHP Piła im. Stanisława Staszica</option>
+         <option value="Hufiec ZHP Powiatu Kaliskiego w Opatówku im. Aleksandra Kamińskiego">Hufiec ZHP Powiatu Kaliskiego w Opatówku im. Aleksandra Kamińskiego</option>
+         <option value="Hufiec ZHP Poznań Grunwald im. Zwycięzców Grunwaldu">Hufiec ZHP Poznań Grunwald im. Zwycięzców Grunwaldu</option>
+         <option value="Hufiec ZHP Poznań Jeżyce im. Stefana Czarnieckiego">Hufiec ZHP Poznań Jeżyce im. Stefana Czarnieckiego</option>
+         <option value="Hufiec ZHP Poznań Nowe Miasto im. Bolesława Chrobrego">Hufiec ZHP Poznań Nowe Miasto im. Bolesława Chrobrego</option>
+         <option value="Hufiec ZHP „Piast” Poznań Stare Miasto  im. Powstańców Wielkopolskich 1918/19">Hufiec ZHP „Piast” Poznań Stare Miasto  im. Powstańców Wielkopolskich 1918/19</option>
+         <option value="Hufiec ZHP Poznań Śródmieście „Siódemka” im. hm. Sylwestra Wietrzykowskiego">Hufiec ZHP Poznań Śródmieście „Siódemka” im. hm. Sylwestra Wietrzykowskiego</option>
+         <option value="Hufiec ZHP Poznań Wilda im. Jana Kasprowicza">Hufiec ZHP Poznań Wilda im. Jana Kasprowicza</option>
+         <option value="Hufiec ZHP Poznań-Rejon im. Szarych Szeregów">Hufiec ZHP Poznań-Rejon im. Szarych Szeregów</option>
+         <option value="Hufiec ZHP Szamotuły im. Armii Poznań">Hufiec ZHP Szamotuły im. Armii Poznań</option>
+         <option value="Hufiec ZHP Śmigiel im. dr. Franciszka Witaszka">Hufiec ZHP Śmigiel im. dr. Franciszka Witaszka</option>
+         <option value="Hufiec ZHP Śrem im. Mazurka Dąbrowskiego">Hufiec ZHP Śrem im. Mazurka Dąbrowskiego</option>
+         <option value="Hufiec ZHP Środa Wielkopolska im. gen. Jana Henryka Dąbrowskiego">Hufiec ZHP Środa Wielkopolska im. gen. Jana Henryka Dąbrowskiego</option>
+         <option value="Hufiec ZHP Trzcianka im. ppor. Emilii Gierczak">Hufiec ZHP Trzcianka im. ppor. Emilii Gierczak</option>
+         <option value="Hufiec ZHP Trzemeszno im. Powstańców Wielkopolskich 1918/1919">Hufiec ZHP Trzemeszno im. Powstańców Wielkopolskich 1918/1919</option>
+         <option value="Hufiec ZHP Turek im. Mikołaja Kopernika">Hufiec ZHP Turek im. Mikołaja Kopernika</option>
+         <option value="Hufiec ZHP Wągrowiec im. hm. Franciszka Grajkowskiego">Hufiec ZHP Wągrowiec im. hm. Franciszka Grajkowskiego</option>
+         <option value="Hufiec ZHP Wolsztyn">Hufiec ZHP Wolsztyn</option>
+         <option value="Hufiec ZHP Września „WRZOS” im. Dzieci Wrzesińskich">Hufiec ZHP Września „WRZOS” im. Dzieci Wrzesińskich</option>
+         <option value="Hufiec ZHP Wschowa im. Janusza Meissnera">Hufiec ZHP Wschowa im. Janusza Meissnera</option>
+       </select>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="generator-submit" data-submit="...generowanie">Generuj</button>
+    </fieldset>
+    <p class="copyright">
+      <a href="https://zhp.wlkp.pl" target="_blank" title="Chorągiew Wielkopolska ZHP">zhp.wlkp.pl</a>
+      <br>
+      <a href="mailto:adam.kedziora@zhp.net.pl">@Adam Kędziora</a>
+    </p>
+  </form>
+</div>
+#frontend na podstawie generatora Chorągwi Mazowieckiej ZHP
+</body>
+</html>
